@@ -1,63 +1,58 @@
-import React, {Component} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import { Container, Row, Col, Button, Card, Form } from 'react-bootstrap'
-
-
-
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Form,
+  Jumbotron,
+} from "react-bootstrap";
 
 class Contact extends Component {
-    render() {
-        return (
-            <div className="Contact">
-                <header className="Contact-header">
-                    <Container>
-                    <Form >
-                        <Row>
-                            <Col md>
-                        <Form.Group controlId="formEmail">
-                            <Form.Label>Email Address</Form.Label>
-                            <Form.Control type="email" placeholder="Example@email.com" />
-                            <Form.Text className="text-muted">
-                                We'll never share your email address.
-                            </Form.Text>
-                        </Form.Group>
-                            </Col>
-                            <Col md>
-                        <Form.Group controlId="formPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="pasword" placeholder="Password" />
-                        </Form.Group>
-                            </Col>
-                            </Row>
-                        <Button variant ="secondary" type="submit">Login</Button>
-                    </Form>
-                    <Card className="mb-3" style={{ marginTop: "30px"}}>
-                       <Card.Img src="https://picsum.photos/200/70"/>
-                       <Card.Body>
-                           <Card.Title>
-                                Card Example
-                           </Card.Title>
-                           <Card.Text>
-                                This is an example of react bootstrap card.
-                           </Card.Text>
-                           <Button variant ="primary"> Read More </Button>
-                       </Card.Body>
-                    </Card>
-                    {/* <Breadcrumb>
-                        <Breadcrumb.Item>Test 1</Breadcrumb.Item>
-                        <Breadcrumb.Item>Test 2</Breadcrumb.Item>
-                        <Breadcrumb.Item active>Test 3</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <Alert variant="success"> This is a button</Alert>
-                    <Button> Test Button </Button> */}
-                    </Container>
-                </header>
-                
-                
-            </div>
-        );
-    }
-    
+  render() {
+    return (
+      <div className="Contact">
+        <div className="jumbotron">
+          <Jumbotron>
+            <h1 className=" display-1">Contact Us! </h1>
+            <p className="bg-none">
+              There are simpler ways for us to get in touch and answer your
+              questions
+            </p>
+          </Jumbotron>
+        </div>
+        <header className="Contact-header">
+          <Container>
+            <Form>
+              <Row>
+                <Col>
+                  <Form.Control placeholder="First name" />
+                </Col>
+                <Col>
+                  <Form.Control placeholder="Last name" />
+                </Col>
+              </Row>
+              <Form.Group controlId="formGroupEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+              </Form.Group>
+              <Form.Group controlId="exampleForm.ControlTextarea1">
+                <Form.Label>Textarea</Form.Label>
+                <Form.Control as="textarea" rows={6} />
+              </Form.Group>
+              <Button
+                as="input"
+                type="submit"
+                variant="secondary"
+                value="Submit"
+              />{" "}
+            </Form>
+          </Container>
+        </header>
+      </div>
+    );
+  }
 }
-export default Contact
+export default Contact;

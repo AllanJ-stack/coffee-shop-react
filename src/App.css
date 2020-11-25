@@ -1,8 +1,8 @@
 .App {
   text-align: center;
   color: whitesmoke;
-
 }
+
 .navbar {
   background-color: rgba(0, 0, 0, 0.9);
   width: 100%;
@@ -15,6 +15,7 @@
   border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
 }
+
 .navbar ul {
   display: flex;
   width: 50%;
@@ -25,6 +26,11 @@
   list-style: none;
   background: rgba(0, 0, 0, 0.6);
 }
+
+.navbar h3 {
+  background: none;
+}
+
 .nav-links li {
   display: flex;
   width: 50%;
@@ -34,60 +40,95 @@
   text-decoration: none;
   background: black;
 }
+
 .contact {
   text-align: center;
 }
- .slider {
+
+/* .about {
+  height: 50vh;
+} */
+
+.jumbotron {
+  background-image: url(https://www.justdelegate.co/media/32578521_1622880617829224_4062586552851628032_o.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 100px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 100px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.6);
+  justify-content: space-between;
+}
+
+.jumbotron h1 {
+  background: none;
+  padding-bottom: 50px;
+}
+
+.jumbotron p {
+  background: none;
+  padding-bottom: 0px;
+}
+
+.alert-dark {
+  background: none;
+}
+
+.slider {
   grid-column: 1 / -1;
   height: 50vh;
   min-width: 100%;
   padding-top: 0;
- }
- /* .side-menu {
-   display: grid;
-   grid-template-columns: 1fr 1.5fr;
-  grid-template-rows: 75px auto auto 50px;
-  max-height: 50vh;
-  color: whitesmoke;
- } */
- .sidebar {
-/*  
-   grid-column: 2 / 1; */
-   background:none;
-   padding: 10%;
- }
- .sidebar li {
-   text-align: left;
-   display: flex;
-   justify-content: space-between;
- }
- .main {
-   /* grid-column: 2 / -1; */
-   background: none;
-   padding: 10%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
- }
- .main .order-item {
-   text-align: left;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
- }
- .main .order-item ul {
-   text-align: end;
- }
- .footer {
-   grid-column: 1 / -1;
-   background: black;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   min-height: 70px;
- }
- .footer h5 {
-   background: rgba(0, 0, 0, 0.1);
-   font-size: small;
- }
+}
 
+.sidebar {
+  background: none;
+  padding: 10%;
+}
+
+.sidebar li {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  background: none;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main li {
+  text-decoration: none;
+}
+
+.main .order-item {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main .order-item ul {
+  text-align: end;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+}
+
+.footer h5 {
+  background: rgba(0, 0, 0, 0.1);
+  font-size: small;
+}

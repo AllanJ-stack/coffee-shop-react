@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import Navbar from './components/Navbar';
+import NavigationBar from './components/NavigationBar';
 import About from './components/About';
 import Shop from './components/Shop';
 import Contact from './components/Contact';
 import Register from './components/Register';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 
 import './App.css';
 
@@ -15,7 +16,7 @@ class App extends Component {
      
       <div className="App">
        <Router>
-            <Navbar />
+            <NavigationBar />
             <Switch>
               {/* <Route path="/" exact component={Home}/> */}
               <Route path="/about" component={About}/>
@@ -77,7 +78,7 @@ App.defaultProps = {
 
 
 //---Main component should display the current orders
-//---and also give the users the ability to select items on the menu
+//---and also give the users the ability to select items on the menuclass 
 class Main extends Component {
   state = {
     orders: [],
@@ -165,7 +166,9 @@ class Main extends Component {
        }
      })
   }
-  render() {
+
+  render () {
+ 
     return (
       <div className="main">
         <div>
@@ -184,7 +187,7 @@ class Main extends Component {
         <div className="select-menu-item">
            <hr />
            <p>
-             Enter item here: &nbsp;
+             Select items here: &nbsp;
               {this.renderMenuSelect() }
               {this.renderMenuItemSelect()}
               {this.renderMenuItemAmountInput()}
@@ -204,6 +207,8 @@ class Main extends Component {
     )
   }
 }
+ 
+
 
 function OrderItem( props ){
   const { customer, items } = props.order
